@@ -17,7 +17,7 @@ public class Tablero {
 	public boolean HayDisponiblesParaUnColor(Color color) {		
 		boolean hayDisponibles = false;
 		
-		for (int i = 0; i < tableroCasillas.length || !hayDisponibles; i++) {
+		for (int i = 0; i < tableroCasillas.length || hayDisponibles == false; i++) {
 			if (tableroCasillas[i] instanceof Vivienda) {
 				Vivienda vivienda = (Vivienda) tableroCasillas[i];
 				if (vivienda.getColor() == color && vivienda.isDisponible()){
