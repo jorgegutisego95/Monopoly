@@ -7,10 +7,14 @@ public class Jugador {
 	private String nombre;
 	private int dinero;
 	private ArrayList<Vivienda> viviendasEnPropiedad;	
+	private boolean estaEnLaCarcel;
+	private boolean tieneCartaCarcel;
 	
 	public Jugador(String nombre, int dinero) {
 		this.nombre = nombre;
 		this.dinero = dinero;		
+		this.estaEnLaCarcel = false;
+		this.tieneCartaCarcel = false; 
 		this.viviendasEnPropiedad = new ArrayList<Vivienda>();
 	}
 
@@ -28,5 +32,25 @@ public class Jugador {
 	
 	public void aniadeVivienda(Vivienda vivienda) {
 		viviendasEnPropiedad.add(vivienda);
+	}
+	
+
+	public void meterEnLaCarcel() {
+		this.estaEnLaCarcel = true;
+	}
+	
+
+	public void salirDeLaCarcel() {
+		this.estaEnLaCarcel = false;
+	}
+	
+
+	public void aniadeCartaCarcel() {
+		this.tieneCartaCarcel = true;
+	}
+	
+
+	public void usaCartaCarcel() {
+		this.tieneCartaCarcel = false;
 	}
 }
