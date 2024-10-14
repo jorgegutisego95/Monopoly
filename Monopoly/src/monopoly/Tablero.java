@@ -11,6 +11,7 @@ public class Tablero {
 		tableroCasillas[2] = new Casilla("Arca Comunal");
 		tableroCasillas[3] = new Vivienda("Avenida Baltica", 80, Color.Verde);
 		tableroCasillas[4] = new Impuesto("Impuesto sobre ingresos", 50);
+		tableroCasillas[5] = new Impuesto("Impuesto sobre ingresos", 50);
 	}
 	
 }
